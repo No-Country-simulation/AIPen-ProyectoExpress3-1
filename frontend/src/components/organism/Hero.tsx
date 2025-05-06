@@ -1,7 +1,6 @@
 import GlassContainer from "../atoms/GlassContainer";
 import ButtonNavBar from "../atoms/ButtonNavBar";
 
-import WaveSeparator from "../atoms/WaveSeparator";
 // 🧾 TEXTOS PRINCIPALES
 const HERO_TITLE = "Calculadora de Huella de Carbono para Empresas";
 const HERO_DESCRIPTION =
@@ -64,7 +63,6 @@ const Hero = () => {
         className="absolute -bottom-40 left-0 w-full  "
         style={{ filter: "brightness(1)" }}
       /> */}
-      <WaveSeparator className="absolute bottom-0" />
     </div>
   );
 };

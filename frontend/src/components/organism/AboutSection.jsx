@@ -1,13 +1,11 @@
 import Image from "next/image"
-import imageAboutSection from "../../../public/png/aboutSection.png"
 import sheetsAboutSection from "../../../public/svg/sheetsAboutSection.svg"
-import WaveSeparator from "../atoms/WaveSeparator"
 
 const AboutSection = () => {
     return (
         <div id="Acerca" className="relative bg-white scroll-mt-18 sm:scroll-mt-0 container-padding w-full min-h-screen flex flex-col-reverse md768:flex-row justify-center items-center gap-6 xl1440:py-[160px] md768:py-[80px] py-10 font-montserrat ">
             <div className="w-[237px] h-[261px] md768:w-[316px] md768:h-[348px] xl1440:w-[422px] xl1440:h-[464px] relative ">
-                <Image src={imageAboutSection} alt="About Us" fill />
+                {/* <Image src={} alt="About Us" fill /> */}
             </div>
             <div className="flex flex-col gap-4 md768:gap-10 md768:flex-1 relative">
                 <div className="flex flex-col gap-2 md768:gap-4">
@@ -28,7 +26,6 @@ const AboutSection = () => {
                 </p>
                 <Image src={sheetsAboutSection} alt="Sheets" className="absolute hidden md768:block w-[100%] h-[100%] xl1440:w-[100%] xl1440:h-[100%] " style={{ opacity: 0.085 }} />
             </div>
-            <WaveSeparator className="absolute bg -bottom-10" flip={true} />
 
         </div>
     )
