@@ -1,6 +1,9 @@
 import GlassContainer from "../atoms/GlassContainer";
 import ButtonNavBar from "../atoms/ButtonNavBar";
-
+import KeyMetrics from "../atoms/KeyMetrics";
+import ContainerStrokeGrayDivisor from "../molecules/ContainerDivisorStrokeGray";
+import FeatureCard from "../atoms/FeatureCard";
+import asteriskIcon from "../../../public/svg/icon-asterisk.svg";
 // 🧾 TEXTOS PRINCIPALES
 const HERO_TITLE = "Calculadora de Huella de Carbono para Empresas";
 const HERO_DESCRIPTION =
@@ -25,7 +28,7 @@ const Hero = () => {
         backgroundImage: "url('/images/bg-section-hero.webp')",
       }}
     >
-      <div className="w-full flex flex-col gap-9 justify-between items-start pt-[100px] pb-[50px] text-white container-padding">
+      <div className="w-full flex flex-col justify-between items-start pt-[100px] pb-[50px] text-white ">
         <GlassContainer className="gap-3" isCardShadow={true}>
           <h1 className="text-[clamp(1.25rem,3vw,3rem)] font-medium whitespace-pre-line leading-[1.2]">
             {HERO_TITLE}
@@ -46,23 +49,48 @@ const Hero = () => {
           </div>
         </GlassContainer>
 
-        <div className="flex flex-col sm:flex-row w-full gap-6 items-stretch">
-          <GlassContainer className="basis-full sm:basis-1/2 text-[clamp(0.70rem,2.5vw,1rem)] ">
-            <h5>{CARD1_TITLE}</h5>
-            <p>{CARD1_TEXT}</p>
-          </GlassContainer>
-          <GlassContainer className="basis-full sm:basis-1/2 text-[clamp(0.70rem,2.5vw,1rem)] ">
-            <h5>{CARD2_TITLE}</h5>
-            <p>{CARD2_TEXT}</p>
-          </GlassContainer>
-        </div>
+        <ContainerStrokeGrayDivisor>
+          <div className="px-[50px] ">
+            <div className="pl-[62px]">
+              <KeyMetrics value="300" description="recursos disponibles" />
+            </div>
+          </div>
+          <div className="px-[50px]">
+            <KeyMetrics value="12k" description="descargas totales" />
+          </div>
+          <div className="px-[50px]">
+            <KeyMetrics value="10k" description="usuarios activos" />
+          </div>
+        </ContainerStrokeGrayDivisor>
+        <ContainerStrokeGrayDivisor>
+          <div className="2xl1920px-[80px] xl1440:px-[50px] px-4 ">
+            <div className="pl-[32px]">
+              <FeatureCard
+                pathIcon={asteriskIcon}
+                title="latest update news"
+                subtitle="stay current"
+                description="Over 1,000 articles published monthly"
+              />
+            </div>
+          </div>
+          <div className="2xl1920px-[80px] xl1440:px-[50px] px-4">
+            <FeatureCard
+              pathIcon={asteriskIcon}
+              title="latest update news"
+              subtitle="stay current"
+              description="Over 1,000 articles published monthly"
+            />
+          </div>
+          <div className="2xl1920px-[80px] xl1440:px-[50px] px-4">
+            <FeatureCard
+              pathIcon={asteriskIcon}
+              title="latest update news"
+              subtitle="stay current"
+              description="Over 1,000 articles published monthly"
+            />
+          </div>
+        </ContainerStrokeGrayDivisor>
       </div>
-      {/* <Image
-        src={separateSection}
-        alt="separador"
-        className="absolute -bottom-40 left-0 w-full  "
-        style={{ filter: "brightness(1)" }}
-      /> */}
     </div>
   );
 };
