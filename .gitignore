@@ -3,7 +3,7 @@
 **/node_modules
 **/build
 
-# Logs
+# Logs .
 **logs
 *.log
 **npm-debug.log*
@@ -45,6 +45,7 @@
 # temp directory
 **.temp
 **.tmp
+
 
 # Runtime data
 **pids
