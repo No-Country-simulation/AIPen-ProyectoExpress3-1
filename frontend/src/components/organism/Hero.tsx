@@ -29,29 +29,26 @@ const Hero = () => {
       }}
     >
       <div className="w-full flex flex-col justify-between items-start pt-[100px] pb-[50px] text-white ">
-        <GlassContainer className="gap-3" isCardShadow={true}>
-          <h1 className="text-[clamp(1.25rem,3vw,3rem)] font-medium whitespace-pre-line leading-[1.2]">
-            {HERO_TITLE}
-          </h1>
-          <p className="text-[clamp(0.90rem,2.5vw,1.40rem)] font-light">
-            {HERO_DESCRIPTION}
-          </p>
-          <div className="flex w-full justify-between items-center">
-            <ButtonNavBar
-              text={HERO_BUTTON}
-              width="w-max"
-              classname="t px-2 py-2 md:px-6 sm:py-2.5 text-xs md:text-base uppercase"
-              href="/carbon-calculator"
-            />
-            <p className=" font-bold hidden md:block text-2xl uppercase">
-              {HERO_BUTTON_TEXT}
-            </p>
+        <div className="flex">
+          <div className="2xl1920:pl-[162px] 2xl1920:pr-[50px] xl1440:pl-[80px] xl1440:pr-[40px] px-4 ">
+            <h2 className="text-[clamp(1.125rem,2.5vw,1.875rem)] text-light-gray-40">
+              Your Journey to Tomorrow Begins Here
+            </h2>
+            <h1 className="text-[clamp(2rem,5vw,4.35rem)]">
+              Explore the Frontiers of Artificial Intelligence
+            </h1>
+            <h3 className="text-[clamp(1rem,2.5vw,1.125rem)] text-light-gray-40">
+              Welcome to the epicenter of AI innovation. FutureTech AI News is
+              your passport to a world where machines think, learn, and reshape
+              the future. Join us on this visionary expedition into the heart of
+              AI.
+            </h3>
           </div>
-        </GlassContainer>
+        </div>
 
         <ContainerStrokeGrayDivisor>
           <div className="px-[50px] ">
-            <div className="pl-[62px]">
+            <div className="xl1440pl-[30px] 2xl1920:pl-[112px]">
               <KeyMetrics value="300" description="recursos disponibles" />
             </div>
           </div>
@@ -63,8 +60,8 @@ const Hero = () => {
           </div>
         </ContainerStrokeGrayDivisor>
         <ContainerStrokeGrayDivisor>
-          <div className="2xl1920px-[80px] xl1440:px-[50px] px-4 ">
-            <div className="pl-[32px]">
+          <div className="sm:px-[50px] xl1440:px-[80px] 2xl1920:px-[162px]">
+            <div className="">
               <FeatureCard
                 pathIcon={asteriskIcon}
                 title="latest update news"
