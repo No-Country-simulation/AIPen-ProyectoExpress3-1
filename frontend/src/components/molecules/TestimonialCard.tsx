@@ -18,7 +18,7 @@ const TestimonialCard = ({
   rating = 5,
 }: TestimonialCardProps) => {
   return (
-    <div className="h-[469px] max-w-[465px] mx-auto bg-black text-white gap-10 p-10 flex flex-col items-center space-y-4">
+    <div className="h-[469px] max-w-[465px] mx-auto gap-[30px] flex flex-col items-center py-[60px]">
 
       <div className=" flex flex-row justify-center items-center gap-3">
         <div className="relative size-[60px]">
@@ -32,12 +32,12 @@ const TestimonialCard = ({
 
         <div className="flex flex-col justify-center ">
           <h3 className="font-semibold text-[clamp(1.125rem,1.5vw,1.25rem)]">{name}</h3>
-          <p className="text-gray-400 text-[clamp(1rem, 1.2vw, 1.125rem">{location}</p>
+          <p className="text-gray-400 text-[clamp(1rem,1.2vw,1.125rem">{location}</p>
         </div>
       </div>
 
       <div className="relative max-w-[465px] h-[209px]">
-        <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-[180px] flex flex-row justify-center items-center gap-[7px] py-2.5 px-4 border border-gray-800 rounded-full">
+        <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-[180px] flex flex-row justify-center items-center gap-[7px] py-2.5 px-4 border border-[var(--color-stroke-gray)] rounded-full bg-[var(--background)]">
           {Array.from({ length: rating }).map((_, index) => (
             <div className="relative size-[20px] " key={index}>
               <Image
@@ -52,8 +52,8 @@ const TestimonialCard = ({
           ))}
         </div>
 
-        <div className="h-[180px] bg-dark-gray px-[30px] rounded-xl flex flex-col justify-center items-center border border-gray-700">
-          <p className="text-center text-[clamp(0.0875rem,1.5vw,1.125rem)] line-clamp-4 leading-relaxed">
+        <div className="h-[180px] p-6 rounded-xl flex flex-col justify-center items-center container-gray-border pt-5">
+          <p className="text-center text-[clamp(0.875rem,1.5vw,1.125rem)] line-clamp-4 leading-relaxed">
             {testimonial}
           </p>
         </div>

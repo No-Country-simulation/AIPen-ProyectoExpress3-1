@@ -46,6 +46,11 @@
     filter: contrast(1.2);
     -webkit-filter: contrast(1.1);
   }
+
+  .container-gray-border {
+    background-color: var(--color-dark-light-gray);
+    border: var(--color-stroke-gray) 1px solid;
+  }
 }
 
 :root {
@@ -111,6 +116,7 @@ body {
   --color-dark-gray: #424242;
   --color-carbon-gray: #212121;
   --color-mint-accent: #c8e6c9;
+  --color-dark-light-gray: #1A1A1A;
 
 
 
