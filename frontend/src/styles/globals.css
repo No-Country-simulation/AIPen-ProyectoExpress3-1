@@ -32,6 +32,8 @@
     @apply bg-clip-text bg-gradient-to-b from-green-dark via-green-primary to-green-light;
   }
 
+  
+
   .bg-gradient-green {
     background-image: radial-gradient(
       ellipse at top left,
