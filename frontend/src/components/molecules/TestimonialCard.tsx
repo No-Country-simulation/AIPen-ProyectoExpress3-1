@@ -7,7 +7,8 @@ interface TestimonialCardProps {
   location: string;
   avatarSrc: string;
   testimonial: string;
-  rating?: number; // opcional por si quieres menos estrellas después
+  rating?: number;
+  className?: string;
 }
 
 const TestimonialCard = ({
@@ -16,9 +17,10 @@ const TestimonialCard = ({
   avatarSrc,
   testimonial,
   rating = 5,
+  className,
 }: TestimonialCardProps) => {
   return (
-    <div className="h-[469px] max-w-[465px] mx-auto gap-[30px] flex flex-col items-center py-[60px]">
+    <div className={`mx-auto flex flex-col items-center container-padding-card ${className}`}>
 
       <div className=" flex flex-row justify-center items-center gap-3">
         <div className="relative size-[60px]">
@@ -36,8 +38,8 @@ const TestimonialCard = ({
         </div>
       </div>
 
-      <div className="relative max-w-[465px] h-[209px]">
-        <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-[180px] flex flex-row justify-center items-center gap-[7px] py-2.5 px-4 border border-[var(--color-stroke-gray)] rounded-full bg-[var(--background)]">
+      <div className="relative max-w-[465px] h-[209px] pt-[23px]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[180px] flex flex-row justify-center items-center gap-[7px] py-2.5 px-4 border border-[var(--color-stroke-gray)] rounded-full bg-[var(--background)]">
           {Array.from({ length: rating }).map((_, index) => (
             <div className="relative size-[20px] " key={index}>
               <Image

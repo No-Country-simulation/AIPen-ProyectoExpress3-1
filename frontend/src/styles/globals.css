@@ -52,6 +52,17 @@
   .container-gray-border {
     background-color: var(--color-dark-light-gray);
     border: var(--color-stroke-gray) 1px solid;
+    border-radius: 12px;
+  }
+
+  .span-gray-highlight {
+    background-color: var(--color-light-gray-20);
+    border-radius: 6px;
+    padding: 6px 10px;
+  }
+
+  .container-padding-card {
+    @apply py-10 gap-[30px] xl:py-[60px] xl:gap-[30px] 2xl:py-20 2xl:gap-10;
   }
 }
 
@@ -124,8 +135,10 @@ body {
 
 
   --color-white: #ffffff;
+  --color-light-gray-20: #333333;
   --color-light-gray-40: #666666;
   --color-light-gray-50: #7e7e81;
+  --color-light-gray-60: #98989A;
   --color-stroke-gray: #262626;
   --color-dark-shadow: rgba(0, 0, 0, 17%);
 
