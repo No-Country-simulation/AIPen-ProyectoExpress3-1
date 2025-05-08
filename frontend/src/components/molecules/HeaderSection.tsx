@@ -17,7 +17,7 @@ const HeaderSection = ({
   classnameButton,
 }: HeaderSectionProps) => {
   return (
-    <div className="flex gap-3 justify-between items-center h-max w-full 2xl1920:px-[162px] 2xl1920:py-[120px] xl1440:p-20 font-medium bg-light-gray-10">
+    <div className="flex gap-3 justify-between items-center h-max w-full 2xl1920:px-[162px] 2xl1920:py-[120px] xl1440:p-20 px-4 py-10 font-medium bg-light-gray-10">
       <div className="flex flex-col gap-4">
         <span className="text-[clamp(0.875rem,1.2vw,1.25rem)] span-gray-highlight w-max ">
           {label}
