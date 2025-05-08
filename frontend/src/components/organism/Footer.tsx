@@ -1,43 +1,50 @@
 "use client";
+
 import Image from "next/image";
 import ScrollToTopButton from "../molecules/ScroollToTopButton";
+import ButtonNavBar from "../atoms/ButtonNavBar";
+import ButtonNavLink from "../atoms/ButtonNavLink";
 
-const columns = [
+interface PropsColumn {
+  title: string;
+  items: string[];
+  isButton?: boolean;
+}
+
+const columns: PropsColumn[] = [
   {
-    title: "INFORMATIONS",
-    items: [
-      "Traffic report",
-      "F.A.Q.",
-      "Privacy Policy",
-      "About the Map",
-      "Blogging Guidelines",
-      "Terms of Service",
-    ],
+    title: "Home",
+    items: ["Featured", "Blogs", "Resources", "Testimonials", "Contact Us", "Newsletter"],
   },
   {
-    title: "SERVICES",
-    items: [
-      "About Us",
-      "Contact Us",
-      "Consulting",
-      "Afilliate Program",
-      "Adversting",
-    ],
+    title: "News",
+    items: ["Trending Stories", "Featured Videos", "Technology", "Health", "Politics", "Environment"],
   },
   {
-    title: "CONNECT",
-    items: ["Instagram", "Twitter", "Facebook", "YouTube", "LinkedIn"],
+    title: "Blogs",
+    items: ["Quantum Computing", "AI Ethics", "Space Exploration", "Biotechnology", "Renewable Energy", "Biohacking"],
+  },
+  {
+    title: "Podcasts",
+    items: ["AI Revolution", "AI Revolution", "TechTalk AI", "AI Conversations"],
+  },
+  {
+    title: "Resources",
+    items: ["Whitepapers", "Ebooks", "Reports", "Research Papers"],
+    isButton: true,
   },
 ];
 
-const FooterColumn = ({ title, items }: { title: string; items: string[] }) => (
-  <div className="relative flex gap-2.5">
-    <p className="absolute rotate-90 origin-top-left backdrop-blur-2xl font-bold">
+const FooterColumn = ({ title, items, isButton }: PropsColumn) => (
+  <div className="flex flex-col gap-2.5">
+    <p className="backdrop-blur-2xl text-[clamp(1rem,1vw,1.25rem)] text-white">
       {title}
     </p>
-    <ul className="pl-2.5 flex flex-col gap-[18px] font-bold">
+    <ul className="flex flex-col gap-[18px] text-[clamp(0.875rem,1.2vw,1.125rem)]">
       {items.map((item, i) => (
-        <li key={i}>{item}</li>
+        <li key={i}>
+          <ButtonNavLink text={item} isBorder={!!isButton} />
+        </li>
       ))}
     </ul>
   </div>
@@ -46,21 +53,19 @@ const FooterColumn = ({ title, items }: { title: string; items: string[] }) => (
 const Footer = () => {
   return (
     <div className="relative w-screen flex flex-col justify-center items-center overflow-hidden">
-
-        <Image
-          src="/images/bg-FooterSection.jpg"
-          alt="background Footer"
-          className="absolute w-full h-full"
-          fill
-        />
-      <div className="text-dark-gray relative  w-full flex flex-col justify-between items-center bg-black/10 backdrop-blur-xs bg-cover bg-no-repeat filter brightness-110">
+      <div className="text-dark-gray relative w-full flex flex-col justify-between items-center bg-black/10 backdrop-blur-xs bg-cover bg-no-repeat filter brightness-110">
         <div className="flex justify-between items-start py-[60px] w-full text-sm gap-8 flex-wrap container-padding">
           {columns.map((col, index) => (
-            <FooterColumn key={index} title={col.title} items={col.items} />
+            <FooterColumn
+              key={index}
+              title={col.title}
+              items={col.items}
+              isButton={col.isButton}
+            />
           ))}
         </div>
 
-        <div className="w-full flex justify-between items-center text-[22px]  py-5 px-8 font-extrabold">
+        <div className="w-full flex justify-between items-center text-[22px] py-5 px-8 font-extrabold">
           <p>© 2025 CO2llector | All rights reserved</p>
           <ScrollToTopButton />
         </div>
