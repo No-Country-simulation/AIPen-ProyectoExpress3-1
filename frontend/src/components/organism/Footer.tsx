@@ -61,11 +61,11 @@ const columns = [
 ];
 
 const FooterColumn = ({ title, items, isButton }: PropsColumn) => (
-  <div className="flex flex-col gap-2.5">
+  <div className="flex flex-col gap-4 md:gap-7 xl:gap-9">
     <p className="backdrop-blur-2xl text-[clamp(1rem,1vw,1.25rem)] text-white">
       {title}
     </p>
-    <ul className="flex flex-col gap-[18px] text-[clamp(0.875rem,1.2vw,1.125rem)]">
+    <ul className="flex flex-col gap-2 md:gap-3 xl:gap-[18px] text-[clamp(0.875rem,1.2vw,1.125rem)]">
       {items.map((item, i) => (
         <li key={i}>
           {isButton ? (
