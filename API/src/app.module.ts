@@ -2,10 +2,9 @@ import { Module } from '@nestjs/common';
 import { UserModule } from './modules/user/user.module';
 import {ConfigModule, ConfigService} from "@nestjs/config";
 import {MongooseModule} from "@nestjs/mongoose";
-import {USER_REPOSITORY} from "./modules/user/domain/repository/user.repository";
-import {UserMongoImplRepository} from "./modules/user/infrastructure/repository/user-mongo-impl.repository";
-import {CREATE_USER_USE_CASE} from "./modules/user/domain/usecase/create-user.usecase";
-import {CreateUserImplUsecase} from "./modules/user/application/usecase/create-user-impl.usecase";
+import {SearchModule} from "./modules/search/search.module";
+import {AIModule} from "./modules/ai/ai.module";
+import {ArticleModule} from "./modules/article/article.module";
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -18,7 +17,7 @@ import {CreateUserImplUsecase} from "./modules/user/application/usecase/create-u
       }),
       inject: [ConfigService],
     }),
-    UserModule],
+    UserModule, SearchModule, AIModule, ArticleModule],
   controllers: [],
   providers: [
 
