@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import ScrollToTopButton from "../molecules/ScroollToTopButton";
-import ButtonNavBar from "../atoms/ButtonNavBar";
 import ButtonNavLink from "../atoms/ButtonNavLink";
+import iconArrow90deg from "@/../public/svg/icon-arrow-simple.svg";
 
 interface PropsColumn {
   title: string;
@@ -11,22 +10,48 @@ interface PropsColumn {
   isButton?: boolean;
 }
 
-const columns: PropsColumn[] = [
+const columns = [
   {
     title: "Home",
-    items: ["Featured", "Blogs", "Resources", "Testimonials", "Contact Us", "Newsletter"],
+    items: [
+      "Featured",
+      "Blogs",
+      "Resources",
+      "Testimonials",
+      "Contact Us",
+      "Newsletter",
+    ],
   },
   {
     title: "News",
-    items: ["Trending Stories", "Featured Videos", "Technology", "Health", "Politics", "Environment"],
+    items: [
+      "Trending Stories",
+      "Featured Videos",
+      "Technology",
+      "Health",
+      "Politics",
+      "Environment",
+    ],
   },
   {
     title: "Blogs",
-    items: ["Quantum Computing", "AI Ethics", "Space Exploration", "Biotechnology", "Renewable Energy", "Biohacking"],
+    items: [
+      "Quantum Computing",
+      "AI Ethics",
+      "Space Exploration",
+      "Biotechnology",
+      "Renewable Energy",
+      "Biohacking",
+    ],
   },
   {
     title: "Podcasts",
-    items: ["AI Revolution", "AI Revolution", "TechTalk AI", "AI Conversations"],
+    items: [
+      "AI Revolution",
+      "AI Revolution",
+      "TechTalk AI",
+      "AI Conversations",
+    ],
   },
   {
     title: "Resources",
@@ -43,7 +68,20 @@ const FooterColumn = ({ title, items, isButton }: PropsColumn) => (
     <ul className="flex flex-col gap-[18px] text-[clamp(0.875rem,1.2vw,1.125rem)]">
       {items.map((item, i) => (
         <li key={i}>
-          <ButtonNavLink text={item} isBorder={!!isButton} />
+          {isButton ? (
+            <ButtonNavLink
+              text={item}
+              isBorder={true}
+              classname="w-max px-4! py-2.5!"
+              icon={iconArrow90deg}
+            />
+          ) : (
+            <ButtonNavLink
+              text={item}
+              isBorder={false}
+              classname="w-max p-0! rounded-none"
+            />
+          )}
         </li>
       ))}
     </ul>
@@ -53,20 +91,20 @@ const FooterColumn = ({ title, items, isButton }: PropsColumn) => (
 const Footer = () => {
   return (
     <div className="relative w-screen flex flex-col justify-center items-center overflow-hidden">
-      <div className="text-dark-gray relative w-full flex flex-col justify-between items-center bg-black/10 backdrop-blur-xs bg-cover bg-no-repeat filter brightness-110">
+      <div className="text-dark-gray relative  w-full flex flex-col justify-between items-center bg-black/10 backdrop-blur-xs bg-cover bg-no-repeat filter brightness-110">
         <div className="flex justify-between items-start py-[60px] w-full text-sm gap-8 flex-wrap container-padding">
           {columns.map((col, index) => (
             <FooterColumn
               key={index}
               title={col.title}
               items={col.items}
-              isButton={col.isButton}
+              isButton={col.isButton} // ← ESTA LÍNEA FALTABA
             />
           ))}
         </div>
 
-        <div className="w-full flex justify-between items-center text-[22px] py-5 px-8 font-extrabold">
-          <p>© 2025 CO2llector | All rights reserved</p>
+        <div className="w-full flex justify-between items-center text-[22px]  py-5 px-8 font-extrabold">
+          <p>Â© 2025 CO2llector | All rights reserved</p>
           <ScrollToTopButton />
         </div>
       </div>
