@@ -6,7 +6,7 @@ const ContainerStrokeGrayDivisor = ({
 }: ChildrenReactNode & { classname?: string }) => {
   const columns =
     Array.isArray(children) && children.length > 0
-      ? `grid-cols-${Math.min(children.length, 3)}`
+      ? `grid-cols-3 ${Math.min(children.length, 3)}`
       : "grid-cols-1";
 
   return (

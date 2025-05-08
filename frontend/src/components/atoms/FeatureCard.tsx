@@ -20,7 +20,10 @@ const FeatureCard = ({
       <div className="flex justify-between gap-5 capitalize">
         <div className="flex flex-col justify-between">
           <h3 className="text-[clamp(1rem,1.5vw,1.25rem)]">{title}</h3>
-          <p className="text-[clamp(0.875rem,2.5vw,1.125rem)] font-light text-light-gray-40"> {subtitle}</p>
+          <p className="text-[clamp(0.875rem,2.5vw,1.125rem)] font-light text-light-gray-40">
+            {" "}
+            {subtitle}
+          </p>
         </div>
         <div className="relative size-[52px] bg-amber-400 rounded-full flex justify-center items-center">
           <Image
@@ -32,7 +35,9 @@ const FeatureCard = ({
           />
         </div>
       </div>
-      <p className="text-[clamp(0.90rem,2.5vw,1.125rem)] text-light-gray-40">{description}</p>
+      <p className="text-[clamp(0.90rem,2.5vw,1.125rem)] text-light-gray-40">
+        {description}
+      </p>
     </div>
   );
 };

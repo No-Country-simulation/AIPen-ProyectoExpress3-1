@@ -1,11 +1,11 @@
 import Image from "next/image";
-import iconStar from "@/../public/svg/icon-star.svg"
-
+import iconStar from "@/../public/svg/icon-star.svg";
+import { StaticImageData } from "next/image";
 
 interface TestimonialCardProps {
   name: string;
   location: string;
-  avatarSrc: string;
+  avatarSrc: StaticImageData | string;
   testimonial: string;
   rating?: number;
   className?: string;
@@ -20,8 +20,9 @@ const TestimonialCard = ({
   className,
 }: TestimonialCardProps) => {
   return (
-    <div className={`mx-auto flex flex-col items-center container-padding-card ${className}`}>
-
+    <div
+      className={`mx-auto flex flex-col items-center container-padding-card ${className}`}
+    >
       <div className=" flex flex-row justify-center items-center gap-3">
         <div className="relative size-[60px]">
           <Image
@@ -33,8 +34,12 @@ const TestimonialCard = ({
         </div>
 
         <div className="flex flex-col justify-center ">
-          <h3 className="font-semibold text-[clamp(1.125rem,1.5vw,1.25rem)]">{name}</h3>
-          <p className="text-gray-400 text-[clamp(1rem,1.2vw,1.125rem">{location}</p>
+          <h3 className="font-semibold text-[clamp(1.125rem,1.5vw,1.25rem)]">
+            {name}
+          </h3>
+          <p className="text-gray-400 text-[clamp(1rem,1.2vw,1.125rem">
+            {location}
+          </p>
         </div>
       </div>
 
@@ -50,7 +55,6 @@ const TestimonialCard = ({
                 className="object-cover"
               />
             </div>
-
           ))}
         </div>
 
@@ -60,7 +64,6 @@ const TestimonialCard = ({
           </p>
         </div>
       </div>
-
     </div>
   );
 };
