@@ -4,6 +4,7 @@ import TestimonialCard from "@/components/molecules/TestimonialCard";
 import avatarPrueba from "@/../public/png/avatar5.png";
 import ServicesOverviewSection from "@/components/organism/ServicesOverviewSection";
 
+
 const HomeLayout = () => {
   return (
     <>
