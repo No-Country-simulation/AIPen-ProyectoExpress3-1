@@ -6,12 +6,13 @@ import AnimatedLink from "../atoms/AnimatedLink";
 import iconBrand from "../../../public/svg/logo-iconAiPen.svg";
 import Link from "next/link";
 import ButtonNavLink from "../atoms/ButtonNavLink";
+import ButtonNavColor from "../atoms/ButtonNavColor";
 
 const navLinks = [
-  { href: "/#Acerca", text: "ACERCA" },
-  { href: "/#RespaldoProfesional", text: "RESPALDO" },
-  { href: "/#Suscribete", text: "SUSCRIBETE" },
-  { href: "/carbon-calculator", text: "CALCULADORA", isButton: true },
+  { href: "/#Acerca", text: "Home" },
+  { href: "/#RespaldoProfesional", text: "News" },
+  { href: "/#Suscribete", text: "Podcasts" },
+  { href: "/carbon-calculator", text: "Resources", isButton: false },
 ];
 
 const Navbar = () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`text-white bg-light-gray-10 w-full flex justify-between items-center px-[80px] py-5 transition-shadow duration-300 glass-ui ${
+      className={`text-white bg-light-gray-10 w-full flex justify-between items-center px-4 xl1440:px-20 2xl1920:px-[162px] py-5 transition-shadow duration-300 glass-ui ${
         isScrolled
           ? "shadow-[0_0_30px_-10px_rgba(255,255,255,0.5)] bg-light-gray/5"
           : ""
@@ -52,21 +53,24 @@ const Navbar = () => {
       </div>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex justify-center items-center gap-6 text-sm font-semibold">
+      <div className="hidden md:flex justify-center items-center gap-4 text-sm font-semibold">
         {navLinks.map((link, index) =>
           link.isButton ? (
             <ButtonNavLink
               key={index}
               text={link.text}
-              classname="px-[18px] py-2.5 font-medium"
+              classname="py-2.5!"
               href={link.href}
               isBorder={true}
-              fontSize="text-[16px"
+              fontSize="text-[16px]"
             />
           ) : (
-            <ButtonNavLink key={index} href={link.href} text={link.text} isBorder={true}/>
+            <ButtonNavLink key={index} href={link.href} text={link.text} isBorder={true} classname="py-2.5! font-medium border-0! hover:border-2!]"/>
           )
         )}
+      </div>
+      <div>
+        <ButtonNavColor />
       </div>
 
       {/* Hamburger menu icon */}
