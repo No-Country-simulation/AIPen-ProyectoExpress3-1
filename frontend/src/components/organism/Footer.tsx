@@ -3,6 +3,7 @@
 import ScrollToTopButton from "../molecules/ScroollToTopButton";
 import ButtonNavLink from "../atoms/ButtonNavLink";
 import iconArrow90deg from "@/../public/svg/icon-arrow-simple.svg";
+import SocialLinks from "../molecules/SocialLinks";
 
 interface PropsColumn {
   title: string;
@@ -102,10 +103,10 @@ const Footer = () => {
             />
           ))}
         </div>
-
-        <div className="w-full flex justify-between items-center text-[22px]  py-5 px-8 font-extrabold">
-          <p>Â© 2025 CO2llector | All rights reserved</p>
-          <ScrollToTopButton />
+        
+        <div className="w-full flex justify-between items-center px-[80px] xl:px-[162px]">
+          {/* <ScrollToTopButton /> */}
+          <SocialLinks />
         </div>
       </div>
     </div>
