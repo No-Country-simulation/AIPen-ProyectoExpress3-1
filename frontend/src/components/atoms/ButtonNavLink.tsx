@@ -41,7 +41,7 @@ const ButtonNavLink = ({
       onMouseLeave={() => setIsHovered(false)}
     >
       {(icon || iconHover) && (
-        <span>
+        <span className="hover:rotate-45 transition-all duration-600">
           <Image
             src={
               (isHovered && iconHover ? iconHover : icon) as
@@ -51,6 +51,7 @@ const ButtonNavLink = ({
             alt="icon"
             width={18}
             height={18}
+            
           />
         </span>
       )}

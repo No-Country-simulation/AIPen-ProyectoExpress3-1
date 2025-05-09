@@ -21,7 +21,7 @@ const TestimonialCard = ({
 }: TestimonialCardProps) => {
   return (
     <div
-      className={`mx-auto flex flex-col items-center container-padding-card ${className}`}
+      className={`flex flex-col items-center container-padding-card ${className}`}
     >
       <div className=" flex flex-row justify-center items-center gap-3">
         <div className="relative size-[60px]">
