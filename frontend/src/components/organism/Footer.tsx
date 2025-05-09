@@ -99,7 +99,7 @@ const Footer = () => {
               key={index}
               title={col.title}
               items={col.items}
-              isButton={col.isButton} // ← ESTA LÍNEA FALTABA
+              isButton={col.isButton}
             />
           ))}
         </div>

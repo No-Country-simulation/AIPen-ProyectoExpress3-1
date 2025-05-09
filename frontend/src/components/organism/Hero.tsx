@@ -1,11 +1,11 @@
-import ButtonNavBar from "../atoms/ButtonNavBar";
 import KeyMetrics from "../atoms/KeyMetrics";
 import ContainerStrokeGrayDivisor from "../molecules/ContainerDivisorStrokeGray";
 import FeatureCard from "../atoms/FeatureCard";
 import asteriskIcon from "../../../public/svg/icon-asterisk.svg";
-import iconArrow from "../../../public/svg/icon-arrow.svg";
+import iconArrow90deg from "@/../public/svg/icon-arrow-simple.svg";
 import sunWhiteImage from "../../../public/svg/sun-white.svg";
 import Image from "next/image";
+import ButtonNavLink from "../atoms/ButtonNavLink";
 
 const HERO_CONTENT = {
   subtitle: "Ahora tu trabajo lo hace la Inteligencia Artificial",
@@ -91,7 +91,7 @@ const Hero = () => {
             </ContainerStrokeGrayDivisor>
           </div>
           <div className="relative w-full overflow-hidden border-l border-stroke-gray 2xl1920:pr-[162px] xl1440:pr-[80px] ">
-            <div className="absolute -translate-x-28 -translate-y-2 rotate-[6deg] w-full h-full opacity-65 ">
+            <div className="absolute -translate-x-28 -translate-y-2 rotate-[6deg] w-full h-full opacity-65  -z-10">
               <Image
                 src={sunWhiteImage}
                 alt="sun"
@@ -99,21 +99,14 @@ const Hero = () => {
                 className="aboslute"
               ></Image>
             </div>
-            <div className="flex flex-col gap-7 justify-end h-full  pt-[160px] pl-20 pb-20">
+            <div className="flex flex-col gap-7 justify-end h-full  pt-[160px] pl-20 pb-20 z-50">
               <h3>{HERO_CONTENT.ctaTitle}</h3>
               <p>{HERO_CONTENT.ctaDescription}</p>
-              <ButtonNavBar
+              <ButtonNavLink
                 classname="w-max flex-row-reverse"
                 text={HERO_CONTENT.ctaButtonText}
-                icon={
-                  <Image
-                    src={iconArrow}
-                    alt="Arrow"
-                    width={20}
-                    height={20}
-                    className="invert"
-                  />
-                }
+                icon={iconArrow90deg}
+                isBorder={true}
               />
             </div>
           </div>

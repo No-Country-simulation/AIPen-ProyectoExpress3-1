@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({title, description, className}: ServiceCardProps) => {
   return (
-    <div className={`h-[144px] md:h-[168px] xl:h-[206px] flex flex-col gap-4 container-gray-border p-6 xl:p-10 ${className}`}>
+    <div className={`h-[144px] md:h-[168px] xl:h-[206px] flex flex-col gap-4 container-gray-border p-6 xl:p-10 bg-light-gray-10 ${className}`}>
       <div className="h-[52px] flex flex-row justify-between items-center gap-5">
         <h3 className="text-[clamp(1rem,1.5vw,1.375rem)] font-semibold" >{title}</h3>
         <div className="relative size-[52px] bg-amber-400 rounded-full flex justify-center items-center">
