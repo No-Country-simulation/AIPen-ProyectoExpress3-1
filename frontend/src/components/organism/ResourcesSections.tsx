@@ -29,8 +29,8 @@ const ResourcesSections = () => {
               height={64}
             />
             <div>
-              <h5>Ebooks</h5>
-              <p>
+              <h5 className="text-[clamp(1.5rem,1.5vw,2.5rem)] font-semibold">Ebooks</h5>
+              <p className="text-[clamp(0.875rem,1.2vw,1.25rem)] text-[var(--color-light-gray-60)]">
                 Explore our collection of ebooks covering a wide spectrum of
                 future technology topics.
               </p>
@@ -43,8 +43,8 @@ const ResourcesSections = () => {
             />
             <div className="container-gray-border flex flex-row items-center justify-between p-5 gap-8">
               <div className="flex-2/3">
-                <p className="text-nowrap">Download By</p>
-                <p>10K+ Users</p>
+                <p className="text-nowrap text-[clamp(0.875rem,1.2vw,1.125rem)] text-[var(--color-light-gray-60)]">Download By</p>
+                <p className="text-[clamp(1.125rem,1.5vw,1.5rem)] font-semibold">10K+ Users</p>
               </div>
               <div className="flex-1/3 ml-2">
                 <AvatarContainer />
@@ -53,8 +53,8 @@ const ResourcesSections = () => {
           </div>
           <div className="flex flex-col gap-[1.875rem] 2xl1920:pr-[162px] xl1440:py-[80px] p-4 sm:pr-4 md:pr-20 xl1440:pl-[80px] justify-center col-span-2">
             <div className="flex gap-14 items-center">
-              <h5 className="text-nowrap">Variety of Topics</h5>
-              <p>
+              <h5 className="text-nowrap text-[clamp(1.125rem,1.5vw,1.5rem)] font-semibold">Variety of Topics</h5>
+              <p className="text-[clamp(0.875rem,1.2vw,1.125rem)] text-[var(--color-light-gray-60)]">
                 Topics include AI in education (25%), renewable energy (20%),
                 healthcare (15%), space exploration (25%), and biotechnology
                 (15%).
@@ -70,13 +70,13 @@ const ResourcesSections = () => {
             </div>
             <div className="[&>div]:p-6! flex flex-col gap-[1.875rem]">
               <div className="container-gray-border flex flex-row items-center justify-between">
-                <p>Total Ebooks</p>
-                <p>Over 100 ebooks</p>
+                <p className="text-[clamp(0.875rem,1.2vw,1.125rem)] text-[var(--color-light-gray-60)]">Total Ebooks</p>
+                <p className="text-[clamp(1rem,1.2vw,1.125rem)] font-semibold">Over 100 ebooks</p>
               </div>
               <div className="container-gray-border flex flex-row items-center justify-between">
                 <div>
-                  <p>Download Formats</p>
-                  <p>PDF format for access.</p>
+                  <p className="text-[clamp(0.875rem,1.2vw,1.125rem)] text-[var(--color-light-gray-60)]">Download Formats</p>
+                  <p className="text-[clamp(1rem,1.2vw,1.125rem)] font-semibold">PDF format for access.</p>
                 </div>
                 <ButtonNavLink
                   text="Preview"

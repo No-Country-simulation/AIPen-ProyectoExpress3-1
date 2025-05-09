@@ -5,6 +5,7 @@ import ButtonNavBar from "../atoms/ButtonNavBar";
 import AnimatedLink from "../atoms/AnimatedLink";
 import iconBrand from "../../../public/svg/logo-iconAiPen.svg";
 import Link from "next/link";
+import ButtonNavLink from "../atoms/ButtonNavLink";
 
 const navLinks = [
   { href: "/#Acerca", text: "ACERCA" },
@@ -32,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`text-white bg-light-gray-10 w-full flex justify-between items-center px-8 py-4 transition-shadow duration-300 glass-ui ${
+      className={`text-white bg-light-gray-10 w-full flex justify-between items-center px-[80px] py-5 transition-shadow duration-300 glass-ui ${
         isScrolled
           ? "shadow-[0_0_30px_-10px_rgba(255,255,255,0.5)] bg-light-gray/5"
           : ""
@@ -51,17 +52,19 @@ const Navbar = () => {
       </div>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex justify-center items-center gap-12 text-sm font-semibold">
+      <div className="hidden md:flex justify-center items-center gap-6 text-sm font-semibold">
         {navLinks.map((link, index) =>
           link.isButton ? (
-            <ButtonNavBar
+            <ButtonNavLink
               key={index}
               text={link.text}
-              classname="px-6 py-2.5 font-medium"
+              classname="px-[18px] py-2.5 font-medium"
               href={link.href}
+              isBorder={true}
+              fontSize="text-[16px"
             />
           ) : (
-            <AnimatedLink key={index} href={link.href} text={link.text} />
+            <ButtonNavLink key={index} href={link.href} text={link.text} isBorder={true}/>
           )
         )}
       </div>
